@@ -1,4 +1,41 @@
-# React + TypeScript + Vite
+# Pizza Shop Web
+
+Frontend application for the Pizza Shop project, built with React + TypeScript + Vite.
+
+## Docker Setup
+
+This project requires the Pizza Shop API to run. You can get the API from [pizzashop-api](https://github.com/rocketseat-education/pizzashop-api).
+
+### Required Docker Files
+
+The following Docker files are required to run the API:
+
+- `files-docker-api/docker-compose.yml`: Contains the PostgreSQL and API service configurations
+- `files-docker-api/Dockerfile`: Defines the API container setup
+- `files-docker-api/.dockerignore`: Specifies which files to exclude from the Docker build
+
+### Setup Steps
+
+1. Clone the API repository:
+
+```bash
+git clone https://github.com/rocketseat-education/pizzashop-api
+```
+
+2. Copy the Docker files from `files-docker-api` to the API project root:
+
+```bash
+cp files-docker-api/* pizzashop-api/
+```
+
+3. Start the Docker containers:
+
+```bash
+cd pizzashop-api
+docker-compose up -d
+```
+
+## Development
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -7,22 +44,18 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## ESLint Configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
     ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -40,13 +73,10 @@ import reactDom from 'eslint-plugin-react-dom'
 
 export default tseslint.config({
   plugins: {
-    // Add the react-x and react-dom plugins
     'react-x': reactX,
     'react-dom': reactDom,
   },
   rules: {
-    // other rules...
-    // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
