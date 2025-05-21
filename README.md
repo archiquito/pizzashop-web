@@ -1,6 +1,6 @@
 # Pizza Shop Web
 
-Frontend application for the Pizza Shop project, built with React + TypeScript + Vite. I created one adaptation to use docker to run api, this way is better to run api without configurtions in yout machine, just install docker, or docker desktop if you use windows.
+Frontend application for the Pizza Shop project, built with React + TypeScript + Vite. I created one adaptation to use docker to run api, this way is better to run api without configurtions in yout machine, just install docker, or docker desktop if you use windows, and follow instructions bellow.
 
 ## Docker Setup
 
