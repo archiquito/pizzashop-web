@@ -24,7 +24,6 @@ export function MonthRevenueCard() {
         {monthRevenue ? (
           <>
             <span className="text-2xl font-bold tracking-tight">
-              R${' '}
               {(monthRevenue.receipt / 100).toLocaleString('pt-BR', {
                 style: 'currency',
                 currency: 'BRL',

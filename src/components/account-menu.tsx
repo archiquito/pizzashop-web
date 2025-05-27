@@ -74,7 +74,7 @@ export function AccountMenu() {
             <Separator className="mt-3" />
           </DropdownMenuLabel>
           <DialogTrigger asChild>
-            <DropdownMenuItem onClick={() => {}}>
+            <DropdownMenuItem>
               <Building className="mr-2 h-4 w-4" />
               <span>Perfil da loja</span>
             </DropdownMenuItem>

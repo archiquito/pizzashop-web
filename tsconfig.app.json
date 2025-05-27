@@ -29,5 +29,11 @@
       "@lib/*": ["./src/lib/*"]
     }
   },
-  "include": ["src", "test/**/*.ts", "test/**/*.tsx"]
+  "include": [
+    "src",
+    "test/**/*.ts",
+    "test/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ]
 }
